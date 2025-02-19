@@ -1,0 +1,112 @@
+body{
+    background-image: url(bgpg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 70;
+}
+
+h1 {
+    font-family: "Jersey 25 Charted", sans-serif;
+    font-weight: 420;
+    font-size: 180px; 
+    color:#0f182883;
+    margin-top: 50px; margin-bottom: 100; 
+    text-align: center;
+   }
+
+
+/* moving pigeon */
+.container {
+    width:auto; 
+    height: 400px; 
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+
+}
+
+.moving-image {
+    width: 200pt;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+/* moving image text  */
+img{
+    display: block;
+    margin: 0 auto;
+    width: 44%;
+    height: auto;
+    z-index: 90;
+
+    transition: 1s ease-in-out;
+}
+
+.container1 {
+   position: relative;
+   display: flex;
+   align-items: center; 
+   z-index: 10; 
+}
+
+.date{
+    font-size: 300px;
+    font-family: "chicago-mn", sans-serif;
+    position: absolute;
+    left: -5px;
+    z-index: 1;
+}
+
+.text-box{
+    z-index: 20;
+    width: fit-content; 
+    padding: 10px 70px; 
+    background-color: #ffffff5b;
+    backdrop-filter: blur(6px); 
+    border-radius: 30px;
+    font-family: Courier, monospace;
+    color: #333; 
+    text-align: left;
+    line-height: 3em;
+    position: absolute;
+    opacity: 0; 
+    transition: opacity 1000ms ease, transform 1000ms ease; 
+    right: 10%;
+}
+
+    
+img:hover{
+    transform: translateX(-280px);
+}
+
+.container1:hover .text-box {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* change text button */
+button{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: right; 
+    position: absolute; 
+    top: 470; 
+    right: 160;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+footer{
+    color: rgba(240, 248, 255, 0.606);
+    margin: 0;
+}

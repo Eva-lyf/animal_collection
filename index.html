@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Collections </title>
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jersey+25+Charted&display=swap');
+    </style>
+	
+    <link rel="stylesheet" href="style/stylehome.css">
+</head>
+
+
+
+<body>
+    <script>
+        const NUM_IMAGES = 28; 
+        const IMAGE_FOLDER = "../interaction/homepage"; 
+        const IMAGE_FILES = Array.from({ length: NUM_IMAGES }, (_, i) => `${IMAGE_FOLDER}/${i + 1}.png`);
+
+        function getRandomPosition() {
+        const AREA_WIDTH = 1100; 
+        const AREA_HEIGHT = 400; 
+        const START_X = 0; 
+        const START_Y = 0; 
+
+        const x = Math.floor(Math.random() * AREA_WIDTH) + START_X;
+        const y = Math.floor(Math.random() * AREA_HEIGHT) + START_Y;
+
+        return { x, y };
+         }
+
+        function createImage() {
+        const img = document.createElement("img");
+        img.src = IMAGE_FILES[Math.floor(Math.random() * IMAGE_FILES.length)];
+        img.classList.add("image");
+        img.style.position = "absolute";
+        img.style.width = "280px"; 
+        img.style.height = "auto";
+
+        img.onload = () => {
+            const { x, y } = getRandomPosition(img.offsetWidth, img.offsetHeight);
+            img.style.left = `${x}px`;
+            img.style.top = `${y}px`;
+        };
+
+            document.body.appendChild(img);
+        }
+
+   
+        setInterval(createImage, 420); 
+    </script>
+
+
+
+<div class="rectangle"></div>
+
+
+
+
+<header style="text-align: center;">MY COLLECTIONS</header> 
+<br>
+    <nav>
+        
+        <a href="index.html">home</a>
+        <!-- <div calss="catdog"> -->
+
+        <a href="../interaction/week one entry/weekoneweb.html">purrr</a>
+        <a href="../interaction/week 2 entry/week2web.html">woof</a>
+        <a href="../interaction/week 3 entry/week3web.html">coocoo</a>
+        <a href="../interaction/week 4 entry/nycadoption.html">adoption</a>
+        <!-- </div> -->
+        
+    </nav>
+
+
+   
+
+   
+</body>
+</html>

@@ -1,0 +1,51 @@
+  body {
+    margin: 70;
+  }
+  nav {
+    margin-top: -40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 30px;
+    font-family: courier;
+    position: sticky;   
+    top: 0;             
+    z-index: 99;    
+    /* background-color: rgba(255, 255, 255, 0.168);  */
+    /* backdrop-filter: blur(5px);              */
+    padding: 10px 20px;  
+    border-radius: 20px;  
+  }
+
+  .catdog{
+    float: right;
+    padding-inline: 20px;
+    /* background-color: rgba(255, 255, 255, 0.4);*/
+    /* backdrop-filter: blur(10px);  */
+  }
+
+
+
+  nav a {
+    text-decoration: none; 
+    color: #323232;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+
+
+    font-size: 20px;
+    font-weight: bold; 
+    transition: color 0.2s ease, text-decoration 0.2s ease; 
+    margin-right: 3em;
+    right: 0;
+    /* border:2px , solid, #f701e7a5; */
+    border-radius: 30px;
+    padding: 5px 10px 4px 10px;
+  }
+
+
+  
+  a:hover {
+    color: #51ff00; 
+    text-decoration: underline;
+  }
